@@ -1,0 +1,392 @@
+:root{--red:#df1f26;--red-dark:#8f1015;--ink:#111;--max:1180px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;color:#151515;background:#fff;line-height:1.5}
+a{text-decoration:none;color:inherit}
+.container{width:min(92%,var(--max));margin:auto}
+.topbar{height:34px;background:#111;color:#fff;font-size:12px}
+.topbar-inner{height:34px;display:flex;align-items:center;gap:28px}
+.topbar-inner>span:first-child{color:#fff}
+.topbar-inner b{font-weight:700}.top-motto{margin-left:auto;font-weight:800;font-style:italic;font-size:13px}
+.top-social{display:flex;gap:8px}.top-social i{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#111;font-style:normal;font-weight:900;font-size:10px}
+.header{height:82px;background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 4px 16px #0002}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px}.brand img{width:64px;height:64px;object-fit:cover;border-radius:50%}
+.brand span{display:flex;flex-direction:column;line-height:.9}.brand strong{font:900 20px "Barlow Condensed";border-bottom:1px solid var(--red);padding-bottom:3px}
+.brand b{color:var(--red);font:900 17px/1.5 "Barlow Condensed";font-style:italic}
+.nav-links{display:flex;align-items:center;gap:27px;font-size:13px;font-weight:800}
+.nav-links>a:hover,.nav-links>a.active{color:var(--red)}
+.nav-cta{background:var(--red);color:#fff!important;padding:10px 18px;border-radius:999px}
+.menu-toggle{display:none;border:0;background:none;font-size:28px}
+.hero{height:470px;position:relative;overflow:hidden;background:url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1800&q=85") center 38%/cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,#080808 0%,#080808ef 20%,#08080855 57%,transparent 100%),linear-gradient(0deg,#0007,transparent 55%)}
+.hero-overlay:after{content:"";position:absolute;inset:0;background-image:linear-gradient(135deg,transparent 50%,#df1f261a 50%);background-size:90px 90px;opacity:.45}
+.hero-content{position:relative;z-index:2;color:#fff;height:470px;padding-top:64px}
+.hero-pretitle{font:900 17px "Barlow Condensed";letter-spacing:4px;margin-bottom:-4px}
+.hero h1{font:900 italic 64px/.85 "Barlow Condensed";letter-spacing:-1px;text-transform:uppercase}.hero h1 span{color:var(--red)}
+.hero-subtitle{font-size:20px;font-weight:800;margin-top:14px}.hero-motto{display:inline-block;background:var(--red);color:#fff;font:800 italic 29px "Barlow Condensed";padding:2px 20px 4px;margin-top:12px;transform:skew(-6deg)}
+.hero-actions{display:flex;gap:12px;margin-top:20px}.btn{min-height:43px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:10px 20px;border-radius:999px;font-size:13px;font-weight:800}
+.btn-red{background:var(--red);color:#fff}.btn-outline{border:1.5px solid #fff;color:#fff;background:#1117}
+.quick-info{height:130px;
+            background:#fff;
+            box-shadow:0 3px 18px #000150;
+}
+.info-grid{height:130px;display:grid;grid-template-columns:repeat(4,1fr);align-items:center}
+.info-grid article{height:86px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;border-right:1px solid var(--red);padding:0 12px}
+.info-grid article:last-child{border-right:0}.info-icon{color:var(--red);font-size:29px;height:38px;line-height:38px}.info-grid strong{font-size:13px;line-height:1.15;margin-bottom:3px}.info-grid small{font-size:10px;line-height:1.3;color:#777}
+.section{padding:55px 0}.about-grid{display:grid;grid-template-columns:42% 40% 18%;align-items:center;min-height:300px;gap:24px}
+.about-photo{height:290px;border-radius:10px;background:linear-gradient(90deg,#0004,#0000),url("https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=900&q=85") center/cover}
+.section-kicker{color:var(--red);font:900 12px Inter;text-transform:uppercase;letter-spacing:1.5px;border-left:5px solid var(--red);padding-left:8px}
+.about-copy h2,.section-heading h2,.news-heading h2{font:900 italic 42px/.95 "Barlow Condensed";text-transform:none;margin:10px 0 12px}.about-copy h2 span{color:var(--red)}
+.about-copy>p:not(.section-kicker){font-size:13px;line-height:1.65;margin-bottom:17px}.logo-card{display:flex;justify-content:center}.logo-card img{width:190px;height:190px;object-fit:cover;border-radius:50%;filter:drop-shadow(0 10px 18px #0003)}
+.categories{background:linear-gradient(90deg,#111 20%,#242424 50%,#111 80%);color:#fff;padding:43px 0 55px}.section-heading.center{text-align:center;margin-bottom:25px}
+.section-heading.center .section-kicker{display:inline-block;border-left:6px solid var(--red);color:#fff}.section-heading.center h2{font-size:43px;margin:6px 0 3px}.section-heading.center>p:last-child{color:#ddd;font-size:13px}
+.category-grid{width:86%;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.category-card{height:195px;border-radius:9px 9px 12px 12px;overflow:hidden;border:1px solid #fff3;position:relative}
+.cat-img{height:100%;background-size:cover;background-position:center}.cat-1{background-image:url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80")}.cat-2{background-image:url("https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=700&q=80")}.cat-3{background-image:url("https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80")}
+.cat-body{position:absolute;bottom:0;left:0;right:0;height:68px;background:var(--red);display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:6px;margin:0 7px 7px;clip-path:polygon(0 15%,5% 0,95% 0,100% 15%,100% 100%,0 100%)}
+.cat-body span{font:900 21px "Barlow Condensed";text-transform:uppercase}.cat-body small{font-weight:800;font-size:12px}
+.news{background:#fff;padding-bottom:45px}.news-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:18px}.news-heading h2{font-size:42px;margin-bottom:0}.text-link{border-bottom:1px solid var(--red);border-right:1px solid var(--red);border-radius:999px;color:var(--red);font-size:12px;font-weight:800;padding:7px 13px}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.news-card{height:145px;border-radius:8px;overflow:hidden;border:1px solid #ddd;display:grid;grid-template-columns:46% 54%}.news-image{background-size:cover;background-position:center}.news-1{background-image:url("https://images.unsplash.com/photo-1553778263-73a83bab9b0c?auto=format&fit=crop&w=500&q=80")}.news-2{background-image:url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=80")}.news-3{background-image:url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=500&q=80")}
+.news-content{padding:15px 12px}.news-content small{color:var(--red);font-weight:800;font-size:10px}.news-content small:before{content:"▣  ";color:var(--red)}.news-content h3{font:800 18px/1.05 "Barlow Condensed";margin:7px 0}.news-content p{font-size:11px;line-height:1.35;color:#555}
+.registration{height:150px;background:linear-gradient(90deg,#f33d43,#a4161c 45%,#f33d43);color:#fff;border-top:1px solid #fff3;border-bottom:1px solid #fff3;overflow:hidden;position:relative}.registration:before,.registration:after{content:"";position:absolute;width:300px;height:220px;border:24px solid #fff1;transform:rotate(-35deg);left:-140px;top:-25px}.registration:after{left:auto;right:-190px}
+.registration-box{height:150px;display:flex;align-items:center;justify-content:center;gap:50px;position:relative;z-index:2}.registration-box>div{text-align:center}.registration-box>div>p{font:700 italic 12px "Barlow Condensed";margin-bottom:3px}.registration-box h2{font:900 italic 34px/.95 "Barlow Condensed"}.registration-box h2 span{color:#fff}.registration-box img{width:108px;height:108px;object-fit:cover;border-radius:50%;position:absolute;right:20px}
+.btn-white{background:#fff;color:#111;border-radius:999px}.btn-white span{color:var(--red)}
+footer{height:75px;background:#111;color:#fff}.footer-grid{height:75px;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;font-size:11px}.footer-motto{text-align:center;font:800 italic 20px "Barlow Condensed"}.footer-social{justify-self:end;display:flex;gap:8px}.footer-social span{width:25px;height:25px;border-radius:50%;background:#fff;color:#111;display:grid;place-items:center;font-weight:900}
+@media(max-width:900px){.top-motto{margin-left:0}.nav-links{display:none}.menu-toggle{display:block}.nav-links.open{position:absolute;display:flex;flex-direction:column;align-items:stretch;top:82px;left:0;right:0;background:#fff;padding:20px 4%;gap:12px}.hero{height:520px}.hero-content{height:520px}.category-grid{width:100%}.about-grid{grid-template-columns:45% 55%}.logo-card{display:none}.news-card{grid-template-columns:1fr;height:auto}.news-image{height:110px}.registration-box{gap:20px}.registration-box img{width:90px;height:90px}}
+@media(max-width:600px){.topbar{height:30px}.topbar-inner{height:30px;justify-content:center}.topbar-inner>span:nth-child(2),.top-social{display:none}.top-motto{margin:auto}.header,.nav{height:68px}.brand img{width:52px;height:52px}.brand span{display:none}.nav-links.open{top:68px}.hero{height:490px}.hero-content{height:490px;padding-top:70px}.hero h1{font-size:48px}.hero-subtitle{font-size:16px}.hero-motto{font-size:23px}.hero-actions{flex-direction:column;align-items:flex-start}.quick-info,.info-grid{height:auto}.info-grid{grid-template-columns:repeat(2,1fr);padding:18px 0}.info-grid article{height:92px;border-bottom:1px solid #ddd;border-right:0}.section{padding:40px 0}.about-grid{grid-template-columns:1fr}.about-photo{height:230px}.about-copy h2,.section-heading h2{font-size:38px}.category-grid{grid-template-columns:1fr}.category-card{height:180px}.news-heading{align-items:flex-start}.news-grid{grid-template-columns:1fr}.news-card{height:145px;grid-template-columns:46% 54%}.registration{height:170px}.registration-box{height:170px;justify-content:flex-start;padding-right:100px}.registration-box img{right:0;width:82px;height:82px}.registration-box h2{font-size:27px}.btn-white{display:none}.footer-grid{grid-template-columns:1fr 1fr}.footer-motto{display:none}}
+
+/* ===== FORMULAIRE D'INSCRIPTION RAF ===== */
+
+.registration-form-section{
+  padding: 80px 20px;
+  background: #f5f5f5;
+}
+
+.registration-form-section .container{
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  border-top: 6px solid #d71920;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.registration-form-section h2{
+  margin-bottom: 12px;
+  color: #151515;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.registration-form-section p{
+  color: #666;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+#registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#registration-form label {
+  color: #222;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+#registration-form input,
+#registration-form select,
+#registration-form textarea {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+#registration-form input:focus,
+#registration-form select:focus,
+#registration-form textarea:focus {
+  border-color: #d71920;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(215, 25, 32, 0.10);
+}
+
+#registration-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+#registration-form button {
+  margin-top: 18px;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #d71920;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#registration-form button:hover {
+  background: #a80f16;
+  transform: translateY(-2px);
+}
+
+#form-message {
+  margin-top: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Adaptation téléphone */
+@media (max-width: 600px) {
+  .registration-form-section {
+    padding: 45px 15px;
+  }
+
+  .registration-form-section .container {
+    padding: 25px 18px;
+  }
+
+  .registration-form-section h2 {
+    font-size: 25px;
+  }
+}
+
+/* ==================================
+   SECTION CONTACT - RIDWANE ACADEMY
+================================== */
+
+.contact-section {
+  padding: 75px 20px;
+  background: #f5f5f5;
+  color: #151515;
+}
+
+.contact-heading {
+  max-width: 700px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.contact-heading .section-kicker {
+  color: #d71920;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.contact-heading h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  margin: 10px 0;
+}
+
+.contact-heading h2 span {
+  color: #d71920;
+}
+
+.contact-heading > p:last-child {
+  color: #666;
+  line-height: 1.7;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  border-bottom: 4px solid #d71920;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.contact-icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 15px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #d71920;
+  color: #fff;
+  font-size: 25px;
+}
+
+.contact-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.contact-card > p {
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.contact-actions a {
+  padding: 11px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.contact-call {
+  background: #d71920;
+}
+
+.contact-whatsapp {
+  background: #168b45;
+}
+
+.contact-actions a:hover {
+  background: #111;
+  transform: translateY(-2px);
+}
+
+/* LOCALISATION */
+
+.contact-location {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 35px;
+  padding: 30px;
+  background: #151515;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.location-icon {
+  font-size: 38px;
+}
+
+.contact-location h3 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.contact-location p {
+  color: #ddd;
+  margin-bottom: 5px;
+}
+
+.contact-location a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #ff5555;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-location a:hover {
+  text-decoration: underline;
+}
+
+/* IDENTITE RAF */
+
+.contact-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 45px;
+  text-align: left;
+}
+
+.contact-bottom img {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.contact-bottom h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.contact-bottom p {
+  color: #555;
+  font-size: 13px;
+}
+
+.contact-bottom strong {
+  color: #d71920;
+  font-style: italic;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-heading h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 50px 15px;
+  }
+
+  .contact-location {
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .contact-bottom img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .footer-grid {
+    height: auto;
+    min-height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    padding: 15px 0;
+  }
+}
+

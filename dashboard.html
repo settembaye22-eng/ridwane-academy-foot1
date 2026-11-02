@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord | RAF</title>
+  <link rel="stylesheet" href="css/style.css">
+ <link rel="icon" type="image/jpg" href="assets/logo-raf.jpg">
+  <style>
+    body {
+      background: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    .dashboard {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .dashboard-header h1 {
+      color: #151515;
+    }
+
+    .dashboard button {
+      border: none;
+      border-radius: 6px;
+      padding: 12px 18px;
+      background: #d71920;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 750px;
+    }
+
+    th, td {
+      padding: 13px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+
+    th {
+      background: #151515;
+      color: white;
+    }
+
+    .status {
+      padding: 5px 9px;
+      border-radius: 5px;
+      background: #fff0c2;
+      color: #755600;
+      font-size: 13px;
+    }
+
+    #dashboard-message {
+      margin: 15px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="dashboard">
+
+    <header class="dashboard-header">
+      <div>
+        <h1>Administration RAF</h1>
+        <p>Gestion des inscriptions des jeunes joueurs</p>
+      </div>
+
+      <button id="logout-button">Déconnexion</button>
+    </header>
+
+    <h2>Liste des inscriptions</h2>
+
+    <p id="dashboard-message">Chargement des inscriptions...</p>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Parent</th>
+            <th>Enfant</th>
+            <th>Date de naissance</th>
+            <th>Téléphone</th>
+            <th>Catégorie</th>
+            <th>Statut</th>
+          </tr>
+        </thead>
+
+        <tbody id="registrations-list"></tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
